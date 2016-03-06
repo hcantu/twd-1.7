@@ -1,0 +1,25 @@
+Dependencies
+------------
+admin.py
+--------
+from django.contrib import admin
+from .models import Choice, Question
+
+models.py
+---------
+import datetime
+from django.db import models
+from django.utils import timezone
+
+urls.py
+-------
+from django.conf.urls import url
+from . import views
+
+views.py
+--------
+from django.shortcuts import get_object_or_404, render
+from django.http import HttpResponseRedirect, HttpResponse
+from django.core.urlresolvers import reverse
+from django.views import generic
+
